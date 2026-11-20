@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+.env*
+!.env.example
+*.p8
+*.p12
+*.jks
+*.key
+*.pem
+.claude-plugin/types/
+.mcpb-cache/

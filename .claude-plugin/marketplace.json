@@ -1,0 +1,12 @@
+{
+  "name": "pin-pilot",
+  "description": "Pin Pilot by Jason Mello: keeps the sessions you are working on pinned at the top of the Claude desktop app's sidebar.",
+  "owner": { "name": "Jason Mello", "url": "https://github.com/jasonmello" },
+  "plugins": [
+    {
+      "name": "pin-pilot",
+      "source": "./",
+      "description": "Keeps the sessions you are working on pinned at the top of the Claude desktop app's sidebar."
+    }
+  ]
+}
