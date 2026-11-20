@@ -1,5 +1,7 @@
 # Pin Pilot
 
+![Pin Pilot: your recent work, always in sight. Automatically pins recent Claude Code sessions to the top of your sidebar.](assets/banner.png)
+
 **Always see what you are working on.** Pin Pilot keeps the Claude Code sessions you used recently pinned at the top of the Claude desktop app's sidebar, and unpins them on its own when they go quiet. No more scrolling through every group to find the conversations that are still running.
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
