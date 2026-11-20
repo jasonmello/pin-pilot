@@ -37,21 +37,25 @@ Every 5 minutes, Pin Pilot looks at your sessions:
 
 Your groups never change: a pinned session stays in its group. Pin Pilot uses no AI model and spends **no tokens**. It only calls the app's own pin and session-list functions, on your machine. It sends nothing anywhere.
 
+## What it runs, reads and sends
+
+Pin Pilot is a small code module (`hooks/register.ts`) that runs inside each Claude Code session of the desktop app. Without the model asking, it calls these desktop-app tools, all on your own machine:
+
+| When | Tool it calls | What for |
+|---|---|---|
+| A few seconds after a session opens, then every 5 minutes | `ccd_session_mgmt` → `list_sessions` (the 20 most recent sessions) | Read each session's id, last-activity time and pin state |
+| When a session became recent | `ccd_sidebar` → `set_pinned` with `pinned: true` | Pin it |
+| When a session it pinned went quiet | `ccd_sidebar` → `set_pinned` with `pinned: false` | Unpin it |
+
+- **Reads:** only those fields from the session list. It never opens your conversations, files or code.
+- **Keeps:** the ids of the sessions it pinned and the time of its last run, in the plugin's own local store, so it never unpins what you pinned.
+- **Sends:** nothing. No network calls, no telemetry, no AI model, no tokens. The two tools above are the desktop app's own local functions, the same ones a right-click "Pin" uses.
+
 ## Install
 
 **In the desktop app:** click **+** next to the prompt box, then **Plugins**, **Add marketplace**, type `jasonmello/pin-pilot`, then **Add plugin** on Pin Pilot.
 
-**From a terminal session** (type `claude` first):
-
-```
-/plugin install pin-pilot --marketplace jasonmello/pin-pilot
-```
-
-**From a shell:**
-
-```bash
-claude plugin install pin-pilot --marketplace jasonmello/pin-pilot
-```
+**From the terminal:** open Claude Code's `/plugin` menu, add the marketplace `jasonmello/pin-pilot` and install Pin Pilot from it. See Claude Code's own plugin docs for that menu.
 
 It starts working in the next session you open, within a few seconds.
 
@@ -59,11 +63,7 @@ It starts working in the next session you open, within a few seconds.
 
 The window that counts as "recent" is a setting: 15 min, 30 min, 1 h (default), 2 h, 4 h or 8 h. Set it when you install, or later in the plugin's settings.
 
-If the installer says an option is "not yet set", you can ignore it: Pin Pilot uses 1 hour until you pick another window. To set it from a shell instead:
-
-```bash
-claude plugin install pin-pilot --marketplace jasonmello/pin-pilot --config window=2h
-```
+If the installer says an option is "not yet set", you can ignore it: Pin Pilot uses 1 hour until you pick another window in the plugin's settings.
 
 ## Good to know
 
@@ -111,21 +111,25 @@ A cada 5 minutos, o Pin Pilot olha suas conversas:
 
 Seus grupos não mudam: a conversa fixada continua no grupo dela. O Pin Pilot não usa modelo de IA e **não gasta tokens**. Ele só usa as funções do próprio app de fixar e listar conversas, no seu computador, e não envia nada para lugar nenhum.
 
+### O que ele roda, lê e envia
+
+O Pin Pilot é um pequeno módulo de código (`hooks/register.ts`) que roda dentro de cada conversa do Claude Code no app desktop. Sem o modelo pedir, ele chama estas ferramentas do app, todas no seu computador:
+
+| Quando | Ferramenta | Para quê |
+|---|---|---|
+| Alguns segundos depois de abrir uma conversa, e depois a cada 5 minutos | `ccd_session_mgmt` → `list_sessions` (as 20 conversas mais recentes) | Ler o id, o horário da última atividade e se está fixada |
+| Quando uma conversa fica recente | `ccd_sidebar` → `set_pinned` com `pinned: true` | Fixar |
+| Quando uma conversa que ele fixou fica parada | `ccd_sidebar` → `set_pinned` com `pinned: false` | Desafixar |
+
+- **Lê:** só esses campos da lista de conversas. Nunca abre suas conversas, arquivos ou código.
+- **Guarda:** os ids das conversas que ele fixou e o horário da última rodada, no armazenamento local do próprio plugin, para nunca desafixar o que você fixou.
+- **Envia:** nada. Sem rede, sem telemetria, sem modelo de IA, sem tokens. As duas ferramentas acima são funções locais do próprio app, as mesmas do "Fixar" no botão direito.
+
 ### Instalar
 
 **No app desktop:** clique em **+** ao lado da caixa de mensagem, depois **Plugins**, **Add marketplace**, digite `jasonmello/pin-pilot` e clique em **Add plugin** no Pin Pilot.
 
-**Numa sessão de terminal** (digite `claude` antes):
-
-```
-/plugin install pin-pilot --marketplace jasonmello/pin-pilot
-```
-
-**Pelo shell:**
-
-```bash
-claude plugin install pin-pilot --marketplace jasonmello/pin-pilot
-```
+**Pelo terminal:** abra o menu `/plugin` do Claude Code, adicione o marketplace `jasonmello/pin-pilot` e instale o Pin Pilot por ele. A documentação de plugins do próprio Claude Code explica esse menu.
 
 Ele começa a funcionar na próxima conversa que você abrir, em poucos segundos.
 
@@ -133,11 +137,7 @@ Ele começa a funcionar na próxima conversa que você abrir, em poucos segundos
 
 O que conta como "recente" é uma configuração: 15 min, 30 min, 1 h (padrão), 2 h, 4 h ou 8 h. Escolha na instalação ou depois, nas configurações do plugin.
 
-Se o instalador avisar que uma opção "não foi definida" ("not yet set"), pode ignorar: o Pin Pilot usa 1 hora até você escolher outra janela. Para definir pelo shell:
-
-```bash
-claude plugin install pin-pilot --marketplace jasonmello/pin-pilot --config window=2h
-```
+Se o instalador avisar que uma opção "não foi definida" ("not yet set"), pode ignorar: o Pin Pilot usa 1 hora até você escolher outra janela nas configurações do plugin.
 
 ### Bom saber
 

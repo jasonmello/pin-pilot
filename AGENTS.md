@@ -22,9 +22,10 @@ Claude Code mod (plugin) for the desktop app: pins sessions with recent activity
 - No personal data in code; the author appears only in `plugin.json`, `NOTICE` and the README.
 - Keep `list_sessions` at a low limit (`LIST_LIMIT`): a big list comes back as an error.
 - English first, then pt-BR, in every public text.
+- README lists every tool the mod calls; keep it in sync with `hooks/register.ts`. No download-and-run commands in docs.
 
 ## Not verified
-- Install through the official directory (GitHub marketplace install was tested on 2026-11-20).
+- Official directory: blocked for non-Verified organizations (see `docs/decisoes.md`). GitHub marketplace install tested on 2026-11-20.
 - Behavior after the app stays closed for hours and is reopened.
 
 ## Before X, read Y

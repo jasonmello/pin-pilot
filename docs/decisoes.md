@@ -6,6 +6,7 @@
 - 2026-11-20 — **`list_sessions` with a limit of 20.** With 100 the app returns a "result too large" error; sessions come newest first, so 20 is enough.
 - 2026-11-20 — **Apache-2.0 license with a NOTICE**, for the widest reach while keeping credit to the author in redistributions.
 - 2026-11-20 — **English first, then pt-BR** in README, docs, commits and PRs.
+- 2026-11-20 — **GitHub is the distribution channel; not submitted to the official directory.** The directory accepts mods (hooks `modules`) and scripts only from Verified organizations, and Pin Pilot is a mod by nature. The README discloses every tool it calls and that it sends nothing, and has no download-and-run commands, so it is ready if that rule changes.
 
 ## Português
 
@@ -15,3 +16,4 @@
 - 2026-11-20 — **`list_sessions` com limite 20.** Com 100 o app devolve erro de resultado grande demais; as sessões vêm da mais recente para a mais antiga, então 20 basta.
 - 2026-11-20 — **Licença Apache-2.0 com NOTICE**, para máximo alcance mantendo o crédito ao autor em redistribuições.
 - 2026-11-20 — **Inglês primeiro, depois pt-BR** em README, docs, commits e PRs.
+- 2026-11-20 — **GitHub é o canal de distribuição; não enviado ao diretório oficial.** O diretório só aceita mods (hooks `modules`) e scripts de organizações Verificadas, e o Pin Pilot é um mod por natureza. O README lista cada ferramenta que ele chama e que não envia nada, e não tem comandos de baixar e rodar, para estar pronto se a regra mudar.
