@@ -9,6 +9,7 @@ Claude Code mod (plugin) for the desktop app: pins sessions with recent activity
 - `.claude-plugin/marketplace.json`: makes the repository installable.
 - `scripts/check.sh`: checks (valid JSON, paths and symbols cited in docs exist).
 - `docs/decisoes.md`: decisions with date and reason.
+- `assets/social-preview.png`: GitHub social preview (1280×640), set by hand in the repo settings.
 - `assets/banner.png`: README banner (its claims must match the code: 5-min refresh, 15 min–8 h window).
 
 ## Commands
