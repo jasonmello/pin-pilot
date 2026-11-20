@@ -57,6 +57,12 @@ It starts working in the next session you open, within a few seconds.
 
 The window that counts as "recent" is a setting: 15 min, 30 min, 1 h (default), 2 h, 4 h or 8 h. Set it when you install, or later in the plugin's settings.
 
+If the installer says an option is "not yet set", you can ignore it: Pin Pilot uses 1 hour until you pick another window. To set it from a shell instead:
+
+```bash
+claude plugin install pin-pilot --marketplace jasonmello/pin-pilot --config window=2h
+```
+
 ## Good to know
 
 - It runs only while the desktop app is open with a session loaded. Close the app and nothing updates until you open it again.
@@ -124,6 +130,12 @@ Ele começa a funcionar na próxima conversa que você abrir, em poucos segundos
 ### Escolha a janela de tempo
 
 O que conta como "recente" é uma configuração: 15 min, 30 min, 1 h (padrão), 2 h, 4 h ou 8 h. Escolha na instalação ou depois, nas configurações do plugin.
+
+Se o instalador avisar que uma opção "não foi definida" ("not yet set"), pode ignorar: o Pin Pilot usa 1 hora até você escolher outra janela. Para definir pelo shell:
+
+```bash
+claude plugin install pin-pilot --marketplace jasonmello/pin-pilot --config window=2h
+```
 
 ### Bom saber
 
