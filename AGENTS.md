@@ -9,6 +9,7 @@ Claude Code mod (plugin) for the desktop app: pins sessions with recent activity
 - `.claude-plugin/marketplace.json`: makes the repository installable.
 - `scripts/check.sh`: checks (valid JSON, paths and symbols cited in docs exist).
 - `docs/decisoes.md`: decisions with date and reason.
+- `assets/banner.png`: README banner (its claims must match the code: 5-min refresh, 15 min–8 h window).
 
 ## Commands
 - Check: `bash scripts/check.sh`
@@ -22,7 +23,7 @@ Claude Code mod (plugin) for the desktop app: pins sessions with recent activity
 - English first, then pt-BR, in every public text.
 
 ## Not verified
-- Install through the GitHub marketplace and the official directory.
+- Install through the official directory (GitHub marketplace install was tested on 2026-11-20).
 - Behavior after the app stays closed for hours and is reopened.
 
 ## Before X, read Y
