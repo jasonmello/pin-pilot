@@ -6,6 +6,24 @@
 
 > Works in the **Claude desktop app** (Code tab), while the app is open. It does nothing in the terminal-only Claude Code.
 
+## The problem
+
+If you use Claude Code for more than one thing, your sidebar fills up fast. You file sessions into groups (Work, Apps, Games, Clients...) to keep things tidy, and that works until you have several sessions going at the same time.
+
+Then the questions start:
+
+- *Which conversations was I working on an hour ago?*
+- *Did that session finish, or is it waiting for my answer?*
+- *Where did I leave the one about the login bug? Work or Apps?*
+
+To answer them you open every group and scroll through all of it, every time. A session that needs you can sit there unnoticed for an hour, just because it was buried in a collapsed group.
+
+## The fix
+
+Pin Pilot keeps a short, always-current list at the very top of the sidebar: **the sessions you touched recently.** Open the app and that list is your "in progress" view. When a session goes quiet, it leaves the list by itself. Your groups stay exactly as you organized them.
+
+Think of it as a "recent" shelf that tidies itself up.
+
 ## How it works
 
 Every 5 minutes, Pin Pilot looks at your sessions:
@@ -55,6 +73,24 @@ Apache License 2.0, see [LICENSE](LICENSE). Copyright 2026 Jason Mello. If you r
 **Veja sempre no que você está trabalhando.** O Pin Pilot fixa no topo da barra lateral do app Claude (aba Code) as conversas que você usou recentemente, e desafixa sozinho quando elas ficam paradas. Chega de rolar todos os grupos para achar as conversas que ainda estão rodando.
 
 > Funciona no **app desktop do Claude** (aba Code), com o app aberto. Não faz nada no Claude Code só de terminal.
+
+### O problema
+
+Se você usa o Claude Code para mais de uma coisa, a barra lateral enche rápido. Você organiza as conversas em grupos (Trabalho, Apps, Games, Clientes...) para manter a ordem, e isso funciona até você ter várias conversas rodando ao mesmo tempo.
+
+Aí começam as perguntas:
+
+- *Em quais conversas eu estava trabalhando uma hora atrás?*
+- *Aquela conversa terminou ou está esperando minha resposta?*
+- *Onde ficou a do bug do login? Em Trabalho ou em Apps?*
+
+Para responder, você abre todos os grupos e rola tudo, toda vez. Uma conversa que precisa de você pode ficar uma hora esquecida, só porque estava escondida num grupo fechado.
+
+### A solução
+
+O Pin Pilot mantém uma lista curta e sempre atualizada bem no topo da barra lateral: **as conversas que você usou recentemente.** Abriu o app, essa lista é a sua visão do que está "em andamento". Quando uma conversa fica parada, ela sai da lista sozinha. Seus grupos continuam exatamente como você organizou.
+
+Pense nele como uma prateleira de "recentes" que se arruma sozinha.
 
 ### Como funciona
 
